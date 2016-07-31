@@ -1,6 +1,6 @@
 # Makefile to build the libMPSSE.dll
 # --- macros
-EXTERNAL_INC_DIR = ../../../External/Windows/CDMv2.10.00
+EXTERNAL_INC_DIR = ../../../External/Windows/CDMv2.12.18
 COMMON_INC_DIR = ../../Common/inc
 INFRA_INC_DIR = ../../Infra/inc
 MIDDLE_INC_DIR = ../../MiddleLayer/inc
