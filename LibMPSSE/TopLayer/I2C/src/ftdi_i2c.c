@@ -863,7 +863,7 @@ FT_STATUS I2C_Read8bitsAndGiveAck(FT_HANDLE handle, uint8 *data, bool ack)
 
 	/*Command MPSSE to send data to PC immediately */
 	buffer[noOfBytes++] = MPSSE_CMD_SEND_IMMEDIATE;
-#if 1
+#if 0
 /*This was the original version 0.3, released in december 2011*/
 	/*set direction*/
 	buffer[noOfBytes++] = MPSSE_CMD_SET_DATA_BITS_LOWBYTE;/* MPSSE command */
@@ -889,7 +889,7 @@ For details see his email on 11 April 2012 09:54, Subject: I2C Issue with clock 
         buffer[noOfBytes++] = ack ? SEND_ACK : SEND_NACK;/*Only MSB is sent*/
 	#endif
 
-	#if 1
+	#if 0
 	/* Proposal 2*/
 		buffer[noOfBytes++] = MPSSE_CMD_SET_DATA_BITS_LOWBYTE;                                                                           /* MPSSE command */
 		buffer[noOfBytes++] = VALUE_SCLLOW_SDALOW ;                                                                                                        // need to set other gpio connected to sda
@@ -901,7 +901,7 @@ For details see his email on 11 April 2012 09:54, Subject: I2C Issue with clock 
         buffer[noOfBytes++] = ack ? SEND_ACK : SEND_NACK;/*Only MSB is sent*/
 	#endif
 
-	#if 0	/* Proposal 3 */
+	#if 1	/* Proposal 3 */
 	if(ack)
 	{
 		/*set direction*/
